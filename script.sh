@@ -13,20 +13,10 @@ do
   cp -Ra demo $TMPDIR
   echo $i
   echo $TMPDIR
-  ansible-runner start -p test.yml $TMPDIR/demo -i ${TMPDIR: -5}
-  # array[$i]="$TMPDIR"
+  ansible-runner start -p test.yml $TMPDIR/demo -i ${TMPDIR: -5} &
   echo ''
 done
 
-sleep 5
-
-# for item in ${array[*]}
-for dir in /tmp/alancoding_*
-do
-  echo $dir
-  cat $dir/demo/artifacts/${dir: -5}/stdout
-  echo ''
-done
 
 # rm -rf /tmp/alancoding_*
 # rm -rf demo/artifacts
