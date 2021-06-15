@@ -2,3 +2,5 @@
 idle_timeout: 600
 job_timeout: 3600
 pexpect_timeout: 10
+process_isolation: true
+process_isolation_executable: podman
