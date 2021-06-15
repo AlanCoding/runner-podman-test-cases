@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Comment out the runc option
+      replace:
+        path: /usr/share/containers/containers.conf
+        regexp: '^runtime = "runc"$'
+        replace: '# runtime = "runc"'
+
+    - name: Un-comment the crun option
+      replace:
+        path: /usr/share/containers/containers.conf
+        regexp: '^# runtime = "crun"$'
+        replace: 'runtime = "crun"'
