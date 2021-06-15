@@ -1,3 +1,11 @@
+### To use
+
+you need to install `tree`
+
+```
+source /var/lib/awx/venv/awx/bin/activate
+```
+
 ### Some commands
 
 Run like in the main examples.

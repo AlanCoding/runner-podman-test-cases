@@ -24,7 +24,7 @@ sleep 5
 for dir in /tmp/alancoding_*
 do
   echo $dir
-  tree $dir/demo/artifacts/${dir: -5}
+  cat $dir/demo/artifacts/${dir: -5}/stdout
   echo ''
 done
 
